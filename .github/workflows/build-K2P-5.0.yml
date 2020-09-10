@@ -1,17 +1,19 @@
 name: Build K2P
 
 on: 
-  release:
-    types: [published]
+#   release:
+#     types: [published]
 #  push:
 #    tags:
 #    - 'v*'
   #  branches: 
   #    - master
   schedule:
-    - cron: 0 17 * * 1,4
-  watch:
-    types: [started]
+    - cron: 0 17 1,15 * *
+  workflow_dispatch:
+    inputs:
+#   watch:
+#     types: [started]
 
 jobs:
   build:
